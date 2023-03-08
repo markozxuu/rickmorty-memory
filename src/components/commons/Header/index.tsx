@@ -1,4 +1,6 @@
-import logo from '../../../assets/images/ricky_morty_logo.svg';
+// Assest
+import logo from '@/assets/images/ricky_morty_logo.svg';
+
 import './header.scss';
 
 const Header = () => (
