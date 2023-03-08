@@ -1,9 +1,9 @@
 // Components
 import CharacterCard from '../CharacterCard';
-// Styles
-import './characterList.scss';
-
+// Types
 import { Character } from '@/types';
+
+import './characterList.scss';
 
 interface CharacterListPros {
   characters: Character[];
