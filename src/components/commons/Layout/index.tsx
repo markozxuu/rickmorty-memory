@@ -1,4 +1,6 @@
+// Components
 import Header from '../Header';
+
 import './layout.scss';
 
 interface LayoutProps {
