@@ -2,20 +2,11 @@
 .rickmorty-card {
   width: 13.25em;
   height: 16.25em;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   border: none;
   outline: none;
   cursor: pointer;
-
-}
-
-@media (max-width: 768px) {
-  .rickmorty-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  box-shadow: var(--box-shadow);
 }
 
 .rickmorty-card.flipped .inner {
@@ -61,10 +52,13 @@
 .disappear {
   opacity: 0;
   transition: opacity 1s ease-out;
+  box-shadow: none;
 }
 
 .avatar {
   border-radius: 8px;
+  height: 180px;
+  width: 180px;
 }
 
 .rickmorty-card .front {
@@ -76,10 +70,29 @@
 
 .rickmorty-card .back {
   background-color: var(--aqua-blue);
-  font-size: 100px;
   transition: 0.3s ease all;
   background-image: url("/ricky_morty_img.png");
   background-size: 180px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width: 768px) {
+  .rickmorty-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10em;
+    height: 15.25em;
+  }
+
+  .avatar {
+    height: 140px;
+    width: 140px;
+  }
+
+  .rickmorty-card .back {
+    background-size: 145px;
+  }
 }
