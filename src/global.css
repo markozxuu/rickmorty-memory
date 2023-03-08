@@ -9,6 +9,7 @@
   --white: #fff;
   --box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.2);
   --border-radius: 8px;
+  --border-radius-label: 25px;
 
   --primary-turquoise-blue-hover:#49D5E1;
   --primary-teal-active: #1A7A83;
