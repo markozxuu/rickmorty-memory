@@ -7,7 +7,8 @@
   --dark-blue: #233A59;
   --black: #000;
   --white: #fff;
-  --box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.2);
+  --box-shadow-link: -1px 1px 4px rgba(0, 0, 0, 0.2);
+  --box-shadow-card: 0px 4px 6px -2px rgba(0, 0, 0, 0.2);
   --border-radius: 8px;
   --border-radius-label: 25px;
 
