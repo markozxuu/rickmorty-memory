@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .label {
+    padding: 8px 16px;
+    background: #d8e054;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  & .logo {
+    width: 60%;
+    margin: auto;
+  }
+}
