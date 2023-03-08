@@ -1,3 +1,4 @@
+// Types
 import { Character } from '@/types';
 
 // Styles
