@@ -1,0 +1,63 @@
+.congrats-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  & .congrats-title {
+    font-size: 28px;
+    color: var(--dark-blue);
+    font-weight: 700;
+  }
+  & .congrats-text {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.btn-reset {
+  max-width: 240px;
+  height: 53px;
+  border-radius: var(--border-radius);
+  border-width: 0 0 4px 4px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 80px;
+  color: var(--dark-blue);
+  box-shadow: var(--box-shadow-link);
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: var(--aqua-blue);
+  border-color: var(--lime-green);
+}
+
+.btn-reset:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: var(--primary-turquoise-blue-hover);
+  border-color: var(--yellow-green);
+}
+
+.btn-reset:active {
+  background-color: var(--primary-teal-active);
+  border-color: var(--yellow-green);
+  color: var(--white);
+}
+
+.root-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.7em;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .root-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
