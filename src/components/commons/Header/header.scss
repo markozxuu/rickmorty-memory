@@ -1,4 +1,4 @@
-.container {
+.containerr {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,8 +13,10 @@
     font-weight: 700;
   }
   
-  & .logo {
+  & .logo-app {
     width: 60%;
     margin: auto;
+    object-fit: contain;
+    object-position: center;
   }
 }
