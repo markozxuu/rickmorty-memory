@@ -50,8 +50,8 @@ const CharacterCard = ({
         >
           <img className="avatar" src={`${image}`} alt={`avatar de ${name}`} />
           <div className="info">
-            <p className="titlee">{name}</p>
-            <p className="text">
+            <p className="character-name">{name}</p>
+            <p className="character-info">
               {status} - {species}
             </p>
           </div>
