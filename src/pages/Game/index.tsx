@@ -4,11 +4,13 @@ import { RouteComponentProps } from '@reach/router';
 // components
 import Layout from '@/components/commons/Layout';
 import CharacterList from './components/CharacterList';
+import Link from '@/components/ui/Link';
 // Services
 import { getCharacters } from '@/services/api';
 // Utils
 import { shuffle } from '@/utils/game';
 import { CARD_FLIPPER } from '@/utils/const';
+import { useCountdown } from '@/utils/useCountdown';
 // Types
 import { Character } from '@/types';
 
@@ -23,8 +25,14 @@ const Game = (props: RouteComponentProps) => {
   const [matched, setMatched] = useState<(string | number)[]>([]);
   const [click, setClick] = useState<number>(0);
 
+  const { minute, second, setIsActive } = useCountdown();
+
   const handleClick = (_index: number) => {
-    if (click === 2) return;
+    setIsActive(true);
+
+    // this prevents the user from selecting more than two cards at a time
+    if (click >= 2) return;
+    // prevents the bug of selecting the same card twice and finding its match
     if (openedCard.includes(_index)) return;
 
     setOpenedCard((opened) => [...opened, _index]);
@@ -66,16 +74,22 @@ const Game = (props: RouteComponentProps) => {
           <h1>Felicidades ganastes</h1>
           <p>efecto de confeti</p>
 
+          <p>
+            terminaste en {minute}:{second}
+          </p>
+
           <div style={{ display: 'flex' }}>
-            <button>Repetir</button>
-            <button>Inicio</button>
+            <Link label="repetir" path="/juego" type="primary" />
+            <Link label="inicio" path="/" type="secondary" />
           </div>
         </section>
       ) : (
         <>
           <section className="information">
             <p className="character-text">👏 Aciertos: {hits}</p>
-            <p className="character-text">⏰ Tiempo: 02:23 min</p>
+            <p className="character-text">
+              ⏰ Tiempo: {minute}:{second}
+            </p>
             <p className="character-text">🫠 Turnos: {turns}</p>
           </section>
           <CharacterList
