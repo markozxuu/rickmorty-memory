@@ -12,7 +12,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
   const { image, name, species, status } = character;
   return (
     <div className="card">
-      <img src={image} height={180} width={180} />
+      <img className="avatar" src={image} alt={`Avatar de ${name}`} />
       <p className="character_name">{name}</p>
       <p className="character_info">
         {status} - {species}
