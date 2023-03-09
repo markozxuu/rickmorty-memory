@@ -58,6 +58,8 @@
   border-radius: var(--border-radius);
   height: 180px;
   width: 180px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .rickmorty-card .front {
@@ -89,8 +91,6 @@
   .avatar {
     height: 135px;
     width: 135px;
-    object-fit: contain;
-    object-position: center;
   }
 
   .rickmorty-card .back {
