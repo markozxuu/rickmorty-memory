@@ -7,7 +7,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "pre-commit": "lint-staged --allow-empty"
+    "pre-commit": "lint-staged --allow-empty",
+    "test": "vitest --ui"
   },
   "dependencies": {
     "@reach/router": "1.3.4",
@@ -24,23 +25,26 @@
   },
   "devDependencies": {
     "@types/node": "18.14.6",
-    "@types/reach__router": "^1.3.11",
+    "@types/reach__router": "1.3.11",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "5.54.0",
     "@typescript-eslint/parser": "5.54.0",
     "@vitejs/plugin-react-swc": "3.2.0",
+    "@vitest/ui": "0.29.2",
     "eslint": "8.35.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-prettier": "4.2.1",
     "husky": "8.0.3",
+    "jsdom": "21.1.0",
     "lint-staged": "13.1.2",
     "path": "0.12.7",
     "prettier": "2.8.4",
     "sass": "1.58.3",
     "typescript": "4.9.5",
-    "vite": "4.1.4"
+    "vite": "4.1.4",
+    "vitest": "0.29.2"
   }
 }
