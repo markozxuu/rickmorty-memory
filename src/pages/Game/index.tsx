@@ -4,7 +4,7 @@ import { RouteComponentProps } from '@reach/router';
 // components
 import Layout from '@/components/commons/Layout';
 import CharacterList from './components/CharacterList';
-import Link from '@/components/ui/Link';
+import CongratsMessage from './components/CongratsMessage';
 // Services
 import { getCharacters } from '@/services/api';
 // Utils
@@ -70,19 +70,7 @@ const Game = (props: RouteComponentProps) => {
   return (
     <Layout>
       {hits === 6 ? (
-        <section>
-          <h1>Felicidades ganastes</h1>
-          <p>efecto de confeti</p>
-
-          <p>
-            terminaste en {minute}:{second}
-          </p>
-
-          <div style={{ display: 'flex' }}>
-            <Link label="repetir" path="/juego" type="primary" />
-            <Link label="inicio" path="/" type="secondary" />
-          </div>
-        </section>
+        <CongratsMessage turns={turns} />
       ) : (
         <>
           <section className="information">
