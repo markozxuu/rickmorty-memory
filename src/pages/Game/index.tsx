@@ -25,7 +25,8 @@ const Game = (props: RouteComponentProps) => {
   const [matched, setMatched] = useState<(string | number)[]>([]);
   const [click, setClick] = useState<number>(0);
 
-  const { minute, second, setIsActive } = useCountdown();
+  const { minute, second, setIsActive, setMinute, setSecond, setCounter } =
+    useCountdown();
 
   const handleClick = (_index: number) => {
     setIsActive(true);
@@ -37,6 +38,18 @@ const Game = (props: RouteComponentProps) => {
 
     setOpenedCard((opened) => [...opened, _index]);
     setClick(click + 1);
+  };
+
+  const handleReset = () => {
+    setHits(0);
+    setTurns(0);
+    setOpenedCard([]);
+    setMatched([]);
+    setClick(0);
+    setIsActive(false);
+    setMinute('00');
+    setSecond('00');
+    setCounter(0);
   };
 
   useEffect(() => {
@@ -70,7 +83,7 @@ const Game = (props: RouteComponentProps) => {
   return (
     <Layout>
       {hits === 6 ? (
-        <CongratsMessage turns={turns} />
+        <CongratsMessage resetGame={handleReset} turns={turns} />
       ) : (
         <>
           <section className="information">
