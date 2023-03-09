@@ -13,10 +13,12 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
     <div className="card">
       <img className="avatar" src={image} alt={`Avatar de ${name}`} />
-      <p className="character_name">{name}</p>
-      <p className="character_info">
-        {status} - {species}
-      </p>
+      <div className="info">
+        <p className="character_name">{name}</p>
+        <p className="character_info">
+          {status} - {species}
+        </p>
+      </div>
     </div>
   );
 };
