@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+
+  & .notFound-title {
+    font-size: 18.4em;
+    font-weight: 700;
+  }
+
+  & .logo {
+    height: 1em;
+    width: 1em;
+    object-fit: contain;
+    object-position: center;
+  }
+}
