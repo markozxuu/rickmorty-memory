@@ -48,10 +48,9 @@ const CharacterCard = ({
             disappear: matched.includes(character.id),
           })}
         >
-          <img className="avatar" src={`${image}`} alt="pokemon-name" />
-
-          <div className="description">
-            <p className="title">{name}</p>
+          <img className="avatar" src={`${image}`} alt={`avatar de ${name}`} />
+          <div className="info">
+            <p className="titlee">{name}</p>
             <p className="text">
               {status} - {species}
             </p>
