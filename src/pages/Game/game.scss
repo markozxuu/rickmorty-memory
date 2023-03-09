@@ -3,16 +3,22 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: 20px;
-  & .title {
+  & .character-text {
     color: var(--black);
     font-weight: 700;
     font-size: 24px;
   }
+}
 
-  @media (max-width: 768px) {
-    & .title {
-      color: red;
+@media (max-width: 768px) {
+  .information {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    & .character-text {
       font-size: 16px;
+      font-weight: 700;
+      color: var(--black);
     }
   }
 }

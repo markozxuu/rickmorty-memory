@@ -74,9 +74,9 @@ const Game = (props: RouteComponentProps) => {
       ) : (
         <>
           <section className="information">
-            <p className="title">Aciertos: {hits}</p>
-            <p className="title">Tiempo: 02:23 min</p>
-            <p className="title">Turnos: {turns}</p>
+            <p className="character-text">👏 Aciertos: {hits}</p>
+            <p className="character-text">⏰ Tiempo: 02:23 min</p>
+            <p className="character-text">🫠 Turnos: {turns}</p>
           </section>
           <CharacterList
             handleClick={handleClick}
