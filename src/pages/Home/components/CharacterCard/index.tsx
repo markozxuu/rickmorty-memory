@@ -11,7 +11,7 @@ interface CharacterCardProps {
 const CharacterCard = ({ character }: CharacterCardProps) => {
   const { image, name, species, status } = character;
   return (
-    <div className="card">
+    <div className="card" data-testid="character-card">
       <img className="avatar" src={image} alt={`Avatar de ${name}`} />
       <div className="info">
         <p className="character_name">{name}</p>
