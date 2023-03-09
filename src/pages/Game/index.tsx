@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
+import Confetti from 'react-confetti';
+import useMeasure from 'react-use-measure';
 
 // components
 import Layout from '@/components/commons/Layout';
@@ -27,6 +29,7 @@ const Game = (props: RouteComponentProps) => {
 
   const { minute, second, setIsActive, setMinute, setSecond, setCounter } =
     useCountdown();
+  const [ref, bound] = useMeasure();
 
   const handleClick = (_index: number) => {
     setIsActive(true);
@@ -81,27 +84,32 @@ const Game = (props: RouteComponentProps) => {
   }, [openedCard]);
 
   return (
-    <Layout>
-      {hits === 6 ? (
-        <CongratsMessage resetGame={handleReset} turns={turns} />
-      ) : (
-        <>
-          <section className="information">
-            <p className="character-text">👏 Aciertos: {hits}</p>
-            <p className="character-text">
-              ⏰ Tiempo: {minute}:{second}
-            </p>
-            <p className="character-text">🫠 Turnos: {turns}</p>
-          </section>
-          <CharacterList
-            handleClick={handleClick}
-            openedCard={openedCard}
-            matched={matched}
-            characters={cards}
-          />
-        </>
-      )}
-    </Layout>
+    <section ref={ref}>
+      <Layout>
+        {hits === 6 ? (
+          <>
+            <Confetti height={bound.height} width={bound.width} />
+            <CongratsMessage resetGame={handleReset} turns={turns} />
+          </>
+        ) : (
+          <>
+            <section className="information">
+              <p className="character-text">👏 Aciertos: {hits}</p>
+              <p className="character-text">
+                ⏰ Tiempo: {minute}:{second}
+              </p>
+              <p className="character-text">🫠 Turnos: {turns}</p>
+            </section>
+            <CharacterList
+              handleClick={handleClick}
+              openedCard={openedCard}
+              matched={matched}
+              characters={cards}
+            />
+          </>
+        )}
+      </Layout>
+    </section>
   );
 };
 
