@@ -68,6 +68,7 @@ const [click, setClick] = useState<number>(0);
 
 ## What can you expect
 
+- [x] HTML semántico
 - [x] Escrito en TypeScript
 - [x] Mobil first
 - [x] Testing UI
@@ -97,6 +98,7 @@ Bueno, esta es mi stack de tecnologías para el front-end.
 
 - react (vanilla)
 - react-use-measure
+- @reach/router
 
 para mejorar la calidad de código:
 - eslint
