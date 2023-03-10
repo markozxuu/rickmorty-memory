@@ -12,6 +12,7 @@
 - [Why i chose vite](#why-i-choose-vite)
 - [Development process](#development-process)
 - [what can you expect](#what-can-you-expect)
+- [Conventions commits](#conventions-commits)
 - [Why i chose vercel](#why-i-chose-vercel)
 - [Stack](#stack)
 - [Metrics web vitals](#metrics-web-vitals)
@@ -80,6 +81,11 @@ const [click, setClick] = useState<number>(0);
 - [x] Se agrego un `countdown` el board del juego
 - [x] E2E (con Checkly)
 
+
+## Conventions commits
+
+Este proyecto utiliza [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) que tiene como finalidad proporcionar un conjunto sencillo de reglas para crear un historial de commits explícito; lo que facilita la escritura de herramientas automatizadas y es facil de leer para los colaboradores del proyecto. Ademas de ayudar a mantener un historial de cambios bien organizado.
+
 ## Why i chose Vercel
 
 Tengo muchas razones por la cual elegirlo pero una de ella es que es plataforma de alojamiento altamente escalable y confiable que utiliza tecnología de clound serverless. Esto significa que mi aplicación se ejecutará más rápidamente y con mayor eficiencia en Vercel, ya que la plataforma se adapta automáticamente al tráfico y la demanda.
@@ -103,14 +109,13 @@ para mejorar la calidad de código:
 
 ## Metrics web vitals
 
-You can download the report made by lighthouse in the `/metrics` folder. I was able to reach a perfect score for both pages. This was possible due to optimization tasks that I carried out.
 
-Puedes descargar el informe realizado por lighthouse en la carpeta `/metrics`. Pude alcanzar una puntuación buena, sin duda esto se puede mejorar optanando estrategias como SSG y con el uso de `server components` sin duda podría llegar al 100 en performance.
+Puedes descargar el informe realizado por lighthouse en la carpeta `/metrics`. Pude alcanzar una puntuación buena, sin duda esto se puede mejorar optanando estrategias como SSG y con el uso de `server components` esto oscilar al 100 en performance.
 
 ![alt text for screen readers](https://i.ibb.co/F7sshQr/Screenshot-2022-12-12-at-20-00-12.png)
 
 ## CI CD
 
-In the project a flow is enabled that triggers a new deployment for each new commit, this is called within vercel **"deployment preview"**. After that, checklyhq runs E2E test with real browsers doing tests with respect to web vitals.
+En el proyecto, se habilita un flujo que desencadena una nuevo deployment para cada nuevo commit, esto se llama dentro de vercel **deployment preview**. Después de eso, checklyhq ejecuta la prueba E2E con navegadores reales.
 
 ![alt text for screen readers](https://i.ibb.co/BnF3J92/Screenshot-2022-12-12-at-20-09-32.png)
