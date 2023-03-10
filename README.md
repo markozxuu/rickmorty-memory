@@ -69,8 +69,9 @@ const [click, setClick] = useState<number>(0);
 ## What can you expect
 
 - [x] Escrito en TypeScript
+- [x] Mobil first
 - [x] Testing UI
-- [x] Pagina bonus (404)
+- [x] Página bonus (404)
 - [x] Pixel Perfect Design 
 - [x] Fuentes optimizadas (Google Fonts)
 - [x] SASS para todo lo de estilos
@@ -112,7 +113,7 @@ para mejorar la calidad de código:
 
 Puedes descargar el informe realizado por lighthouse en la carpeta `/metrics`. Pude alcanzar una puntuación buena, sin duda esto se puede mejorar optanando estrategias como SSG y con el uso de `server components` esto oscilar al 100 en performance.
 
-![alt text for screen readers](https://i.ibb.co/F7sshQr/Screenshot-2022-12-12-at-20-00-12.png)
+![alt text for screen readers](https://i.ibb.co/XZXX19k/Screenshot-2023-03-09-at-17-55-17.png)
 
 ## CI CD
 
