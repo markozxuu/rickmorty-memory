@@ -119,3 +119,8 @@ Puedes descargar el informe realizado por lighthouse en la carpeta `/metrics`. P
 
 En el proyecto, se habilita un flujo que desencadena una nuevo deployment para cada nuevo commit, esto se llama dentro de vercel **deployment preview**. Después de eso, checklyhq ejecuta la prueba E2E con navegadores reales.
 
+![alt text for screen readers](https://i.ibb.co/1MXF4kP/Screenshot-2023-03-09-at-18-41-34.png)
+
+
+
+
