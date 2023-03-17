@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import cx from 'clsx';
 
 // Utils
-import { FLIPPED_FIRST } from '@/utils/const';
+import { FLIPPED_FIRST_MILE_SECONDS } from '@/utils/const';
 // Types
 import { Character } from '@/types';
 
@@ -32,7 +32,7 @@ const CharacterCard = ({
     if (isShowBoard) {
       setTimeout(() => {
         setShowBoard(false);
-      }, FLIPPED_FIRST);
+      }, FLIPPED_FIRST_MILE_SECONDS);
     }
   }, []);
   return (
