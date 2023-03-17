@@ -8,7 +8,7 @@ import CharacterList from './components/CharacterList';
 // Types
 import { Character } from '@/types';
 // Services
-import { getCharacters } from '@/services/api';
+import { getCharacters } from '@/services/rick_morty';
 
 import './home.scss';
 
