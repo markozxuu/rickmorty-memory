@@ -9,7 +9,7 @@ const App = () => (
   <Router>
     <Home path="/" />
     <Game path="/juego" />
-    <NotFound path="/:rest*" />
+    <NotFound default />
   </Router>
 );
 
