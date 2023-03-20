@@ -3,7 +3,7 @@ import { Link, RouteComponentProps } from '@reach/router';
 
 // Components
 import Layout from '@/components/commons/Layout';
-import CharacterList from './components/CharacterList';
+import CharacterList from '@/components/ui/CharacterList';
 import Button from '@/components/ui/Button';
 // Types
 import { Character } from '@/types';

@@ -5,7 +5,7 @@ import useMeasure from 'react-use-measure';
 
 // components
 import Layout from '@/components/commons/Layout';
-import CharacterList from './components/CharacterList';
+import CharacterList from '@/components/ui/CharacterList';
 import CongratsMessage from './components/CongratsMessage';
 // Services
 import { getCharacters } from '@/services/rick_morty';
@@ -105,6 +105,7 @@ const Game = (props: RouteComponentProps) => {
               openedCard={openedCard}
               matched={matched}
               characters={cards}
+              defaultActive={false}
             />
           </>
         )}
