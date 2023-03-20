@@ -49,7 +49,9 @@ Los pasos para configurar esto son muy simples. Estoy usando la versión `7.16.7
 
 ## Storybook
 
-Storybook es una herramienta muy útil para desarrollar componentes de React en un proyecto. Nos provee de muchos beneficios como lo son: Aislamiento de componente, Visualización, Documentación, etc. Es taller muy completo en todo el sentido, al crear lo que son "Story" nos permite capturar todos los posibles estados del componente. 
+Storybook es una herramienta muy útil para desarrollar componentes de React en un proyecto. Nos provee de muchos beneficios como lo son: Aislamiento de componente, Visualización, Documentación, etc. Es framework muy completo en todo el sentido, al crear lo que son "Story" nos permite capturar todos los posibles estados del componente. 
+
+😎 [Puede consultar la documentación de los componentes de la app rick and morty aquí](https://rickmorty-components.vercel.app/?path=/docs/header--docs)
 
 ## Why i choose Vite
 
