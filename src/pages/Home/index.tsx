@@ -35,7 +35,7 @@ const Home = (props: RouteComponentProps) => {
     <Layout>
       <section>
         <h2 className="title">Personajes</h2>
-        <CharacterList characters={characters} />
+        <CharacterList characters={characters} defaultActive />
         <div className="container-link">
           <Link to="/juego">
             <Button label="Jugar" />
