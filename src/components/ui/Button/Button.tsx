@@ -1,27 +1,24 @@
-import { Link as LinkRouter } from '@reach/router';
 import cx from 'clsx';
 
 // Styles
-import './link.scss';
+import './button.scss';
 
-type TypeLink = 'primary' | 'secondary';
-
-interface LinkProps {
-  type: TypeLink;
+interface ButtonProps {
+  type?: 'primary' | 'secondary';
   label: string;
-  path: string;
+  onClick?: () => void;
 }
 
-const Link = ({ type, label, path }: LinkProps) => {
-  const linkClass = cx('btn', {
+const Button = ({ type = 'primary', label, onClick }: ButtonProps) => {
+  const btnClass = cx('btn', {
     primary: type === 'primary',
     secondary: type === 'secondary',
   });
   return (
-    <LinkRouter to={path} className={linkClass}>
+    <button className={btnClass} onClick={onClick}>
       {label}
-    </LinkRouter>
+    </button>
   );
 };
 
-export default Link;
+export default Button;
