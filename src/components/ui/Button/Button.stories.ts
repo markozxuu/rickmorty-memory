@@ -1,28 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Link from './Link';
+import Button from './Button';
 
-const meta: Meta<typeof Link> = {
-  title: 'Link',
-  component: Link,
+const meta: Meta<typeof Button> = {
+  title: 'Button',
+  component: Button,
   tags: ['autodocs'],
+  args: {
+    label: 'Button',
+  },
 };
 
 export default meta;
-type Story = StoryObj<typeof Link>;
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
     type: 'primary',
-    path: '/',
-    label: 'Jugar',
   },
 };
 
 export const Secondary: Story = {
   args: {
     type: 'secondary',
-    path: '/juego',
-    label: 'Jugar',
   },
 };
