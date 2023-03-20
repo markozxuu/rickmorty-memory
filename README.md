@@ -79,6 +79,7 @@ const [click, setClick] = useState<number>(0);
 ## What can you expect
 
 - [x] HTML semántico
+- [x] Storybook
 - [x] Escrito en TypeScript
 - [x] Mobil first
 - [x] Testing UI
