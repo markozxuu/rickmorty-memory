@@ -1,7 +1,7 @@
-import { RouteComponentProps } from '@reach/router';
+import { Link, RouteComponentProps } from '@reach/router';
 
 // Components
-import Link from '@/components/ui/Link';
+import Button from '@/components/ui/Button';
 
 import './notFound.scss';
 
@@ -24,7 +24,9 @@ const NotFound = (props: RouteComponentProps) => (
           <br />
           <span>ha trasladado a otro universo.</span>
         </p>
-        <Link type="primary" path="/" label="Inicio" />
+        <Link to="/">
+          <Button label="Inicio" />
+        </Link>
       </div>
     </section>
   </main>
