@@ -1,20 +1,25 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-import Link from './index';
+import Button from './Button';
 
-describe('Link', () => {
-  test('should show the link component', () => {
-    render(<Link label="Click me" path="/about" type="primary" />);
+describe('Button', () => {
+  test('should show the <Button> component', () => {
+    render(<Button label="Click me" />);
     expect(screen.getByText('Click me')).toBeDefined();
   });
   test('should render with "secondary" type', () => {
+    const { getByText } = render(<Button label="Home" type="secondary" />);
+    const btnElement = getByText('Home');
+    expect(btnElement).toHaveClass('secondary');
+  });
+  test('calls onClick prop when clicked', () => {
+    const handleClick = jest.fn();
     const { getByText } = render(
-      <Link label="Home" path="/" type="secondary" />,
+      <Button label="Play game" onClick={handleClick} />,
     );
-    const linkElement = getByText('Home');
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(linkElement).toHaveClass('secondary');
+    const btnElement = getByText('Play game');
+    fireEvent.click(btnElement);
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });
