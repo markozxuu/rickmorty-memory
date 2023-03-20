@@ -9,6 +9,7 @@
 
 
 - [Get started](#get-started)
+- [Storybook](#storybook)
 - [Why i chose vite](#why-i-choose-vite)
 - [Development process](#development-process)
 - [what can you expect](#what-can-you-expect)
@@ -30,7 +31,10 @@ Los pasos para configurar esto son muy simples. Estoy usando la versión `7.16.7
     "preview": "vite preview",
     "pre-commit": "lint-staged --allow-empty",
     "test": "vitest --ui",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+
   },
 ```
 
@@ -40,6 +44,12 @@ Los pasos para configurar esto son muy simples. Estoy usando la versión `7.16.7
 - test: ejecuta `vitest` para evualiar todos nuestros test
 - test:coverage ejecuta `vitest` nos genera un coverage con el reporte de nuestró código
 - pre-commit: define el hook para ejecutar antes de commit con un el archivo.
+- storybook: inicializa un servidor de desarrollo de storybook
+- build-storybook: construye nuestras paginas de storybook listo como assest estaticos
+
+## Storybook
+
+Storybook es una herramienta muy útil para desarrollar componentes de React en un proyecto. Nos provee de muchos beneficios como lo son: Aislamiento de componente, Visualización, Documentación, etc. Es taller muy completo en todo el sentido, al crear lo que son "Story" nos permite capturar todos los posibles estados del componente. 
 
 ## Why i choose Vite
 
