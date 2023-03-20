@@ -14,7 +14,7 @@ describe('Button', () => {
     expect(btnElement).toHaveClass('secondary');
   });
   test('calls onClick prop when clicked', () => {
-    const handleClick = jest.fn();
+    const handleClick = vi.fn(() => 0);
     const { getByText } = render(
       <Button label="Play game" onClick={handleClick} />,
     );
