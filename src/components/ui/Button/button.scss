@@ -1,14 +1,9 @@
 .btn {
-  max-width: 240px;
-  height: 53px;
+  padding: .3em 3.3em;
   border-radius: var(--border-radius);
   border-width: 0 0 4px 4px;
   border-style: solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 80px;
+  display: inline-flex;
   color: var(--dark-blue);
   box-shadow: var(--box-shadow-link);
   cursor: pointer;

@@ -3,13 +3,13 @@ import { Router } from '@reach/router';
 // Pages
 import Home from './pages/Home';
 import Game from './pages/Game';
-import NotFound from './pages/404';
+import NotFound from './pages/NotFound';
 
 const App = () => (
   <Router>
     <Home path="/" />
     <Game path="/juego" />
-    <NotFound path="/:rest*" />
+    <NotFound default />
   </Router>
 );
 

@@ -5,13 +5,13 @@ import useMeasure from 'react-use-measure';
 
 // components
 import Layout from '@/components/commons/Layout';
-import CharacterList from './components/CharacterList';
+import CharacterList from '@/components/ui/CharacterList';
 import CongratsMessage from './components/CongratsMessage';
 // Services
-import { getCharacters } from '@/services/api';
+import { getCharacters } from '@/services/rick_morty';
 // Utils
 import { shuffle } from '@/utils/game';
-import { CARD_FLIPPER } from '@/utils/const';
+import { CARD_FLIPPER_MILE_SECONDS } from '@/utils/const';
 import { useCountdown } from '@/utils/useCountdown';
 // Types
 import { Character } from '@/types';
@@ -80,7 +80,7 @@ const Game = (props: RouteComponentProps) => {
       setOpenedCard([]);
       setClick(0);
       setTurns(turns + 1);
-    }, CARD_FLIPPER);
+    }, CARD_FLIPPER_MILE_SECONDS);
   }, [openedCard]);
 
   return (
@@ -105,6 +105,7 @@ const Game = (props: RouteComponentProps) => {
               openedCard={openedCard}
               matched={matched}
               characters={cards}
+              defaultActive={false}
             />
           </>
         )}

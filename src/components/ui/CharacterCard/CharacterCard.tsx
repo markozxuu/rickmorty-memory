@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import cx from 'clsx';
 
 // Utils
-import { FLIPPED_FIRST } from '@/utils/const';
+import { FLIPPED_FIRST_MILE_SECONDS } from '@/utils/const';
 // Types
 import { Character } from '@/types';
 
@@ -14,6 +14,7 @@ interface CharacterCardProps {
   handleClick: (index: number) => void;
   index: number;
   matched: (string | number)[];
+  defaultActive: boolean;
 }
 
 const CharacterCard = ({
@@ -22,23 +23,28 @@ const CharacterCard = ({
   index,
   handleClick,
   matched,
+  defaultActive,
 }: CharacterCardProps) => {
   const { image, name, species, status } = character;
 
   const [isShowBoard, setShowBoard] = useState(true);
 
   useEffect(() => {
+    if (defaultActive) return;
+
     // Time that flipped cards will be flipped
     if (isShowBoard) {
       setTimeout(() => {
         setShowBoard(false);
-      }, FLIPPED_FIRST);
+      }, FLIPPED_FIRST_MILE_SECONDS);
     }
   }, []);
   return (
     <div
+      data-testid="character-card"
       className={cx('rickmorty-card', {
         flipped: isShowBoard || isFlipped,
+        'default-active': defaultActive,
       })}
       onClick={() => handleClick(index)}
     >
@@ -48,7 +54,7 @@ const CharacterCard = ({
             disappear: matched.includes(character.id),
           })}
         >
-          <img className="avatar" src={`${image}`} alt={`avatar de ${name}`} />
+          <img className="avatar" src={`${image}`} alt={`Avatar de ${name}`} />
           <div className="info">
             <p className="character-name">{name}</p>
             <p className="character-info">

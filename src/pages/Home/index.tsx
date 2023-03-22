@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { RouteComponentProps } from '@reach/router';
+import { Link, RouteComponentProps } from '@reach/router';
 
 // Components
 import Layout from '@/components/commons/Layout';
-import Link from '@/components/ui/Link';
-import CharacterList from './components/CharacterList';
+import CharacterList from '@/components/ui/CharacterList';
+import Button from '@/components/ui/Button';
 // Types
 import { Character } from '@/types';
 // Services
-import { getCharacters } from '@/services/api';
+import { getCharacters } from '@/services/rick_morty';
 
 import './home.scss';
 
@@ -35,9 +35,11 @@ const Home = (props: RouteComponentProps) => {
     <Layout>
       <section>
         <h2 className="title">Personajes</h2>
-        <CharacterList characters={characters} />
+        <CharacterList characters={characters} defaultActive />
         <div className="container-link">
-          <Link type="primary" label="jugar" path="/juego" />
+          <Link to="/juego">
+            <Button label="Jugar" />
+          </Link>
         </div>
       </section>
     </Layout>

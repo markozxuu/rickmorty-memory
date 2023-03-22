@@ -1,4 +1,7 @@
-import Link from '@/components/ui/Link';
+import { Link } from '@reach/router';
+
+// Components
+import Button from '@/components/ui/Button';
 
 import './congratsMessage.scss';
 
@@ -14,10 +17,10 @@ const CongratsMessage = ({ turns, resetGame }: CongratsMessageProps) => {
       <p className="congrats-text">Terminastes el juego con {turns} turnos</p>
 
       <div className="root-buttons">
-        <button className="btn-reset" onClick={resetGame}>
-          Repetir
-        </button>
-        <Link type="secondary" path="/" label="inicio" />
+        <Button label="Repetir" onClick={resetGame} />
+        <Link to="/">
+          <Button label="Inicio" type="secondary" />
+        </Link>
       </div>
     </section>
   );

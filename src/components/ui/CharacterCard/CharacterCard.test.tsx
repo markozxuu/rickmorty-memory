@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 
-import CharacterCard from './index';
+import CharacterCard from './CharacterCard';
 
 const mockData = {
   id: '1',
@@ -15,19 +14,23 @@ const mockData = {
 describe('CharacterCard', () => {
   test('should show the CharacterCard component', () => {
     const { getByAltText, getByText } = render(
-      <CharacterCard character={mockData} />,
+      <CharacterCard
+        character={mockData}
+        index={0}
+        matched={[]}
+        defaultActive={false}
+        handleClick={() => 0}
+        isFlipped={true}
+      />,
     );
 
     const avatarImg = getByAltText(`Avatar de ${mockData.name}`);
-    // @ts-ignore
     expect(avatarImg).toBeInTheDocument();
 
     const characterName = getByText(mockData.name);
-    // @ts-ignore
     expect(characterName).toBeInTheDocument();
 
     const characterInfo = getByText(`${mockData.status} - ${mockData.species}`);
-    // @ts-ignore
     expect(characterInfo).toBeInTheDocument();
   });
 });

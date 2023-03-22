@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import CharacterList from './index';
+import CharacterList from './CharacterList';
 
 describe('CharacterList', () => {
   test('renders 12 CharacterCard', () => {
@@ -12,7 +12,9 @@ describe('CharacterList', () => {
       status: 'Alive',
     });
 
-    const { getAllByTestId } = render(<CharacterList characters={mockData} />);
+    const { getAllByTestId } = render(
+      <CharacterList characters={mockData} defaultActive={false} />,
+    );
     const characterCards = getAllByTestId('character-card');
 
     expect(characterCards).toHaveLength(12);

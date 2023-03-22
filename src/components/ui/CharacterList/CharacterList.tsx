@@ -1,22 +1,24 @@
 // Components
 import CharacterCard from '../CharacterCard';
-// Styles
-import './characterList.scss';
-
+// Types
 import { Character } from '@/types';
+
+import './characterList.scss';
 
 interface CharacterListPros {
   characters: Character[];
-  openedCard: number[];
-  matched: (string | number)[];
-  handleClick: (_index: number) => void;
+  openedCard?: number[];
+  matched?: (string | number)[];
+  handleClick?: (_index: number) => void;
+  defaultActive: boolean;
 }
 
 const CharacterList = ({
   characters,
-  openedCard,
-  matched,
-  handleClick,
+  openedCard = [],
+  matched = [],
+  handleClick = () => 0,
+  defaultActive = true,
 }: CharacterListPros) => {
   return (
     <div className="card-list">
@@ -33,6 +35,7 @@ const CharacterList = ({
             handleClick={handleClick}
             index={_index}
             matched={matched}
+            defaultActive={defaultActive}
           />
         );
       })}

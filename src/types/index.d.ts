@@ -6,7 +6,7 @@ export type Character = {
   image: string;
 };
 
-export interface Characters {
+export interface CharactersResponse {
   characters: {
     results: Character[];
   };

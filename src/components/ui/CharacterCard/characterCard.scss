@@ -1,4 +1,3 @@
-
 .rickmorty-card {
   width: 13.25em;
   height: 17.25em;
@@ -24,6 +23,10 @@
 
 .rickmorty-card.flipped .inner {
   transform: rotateY(180deg);
+}
+
+.rickmorty-card.default-active {
+  cursor: not-allowed;
 }
 
 .inner {
@@ -72,7 +75,7 @@
 .rickmorty-card .back {
   background-color: var(--aqua-blue);
   transition: 0.3s ease all;
-  background-image: url("/ricky_morty_img.png");
+  background-image: url('/ricky_morty_img.png');
   background-size: 180px;
   background-repeat: no-repeat;
   background-position: center;
